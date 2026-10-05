@@ -2,6 +2,20 @@
 
 REST API scraper manhwa berbahasa Indonesia — **Shinigami** (WordPress Madara).
 
+> ⚠️ **PENTING — WAJIB PAKAI PROXY**
+> Situs target dilindungi **Cloudflare** dan memblokir IP datacenter
+> (VPS, Vercel, Railway, dsb). API akan mengembalikan `502 upstream_blocked`
+> kalau dijalankan dari IP yang diblokir.
+>
+> **Solusi:** jalankan API ini dari IP residensial/bersih, atau set proxy:
+> ```bash
+> export HTTP_PROXY=http://user:pass@proxy-host:port
+> export HTTPS_PROXY=http://user:pass@proxy-host:port
+> ./run.sh
+> ```
+> Bisa juga set via env `SHINIGAMI_DOMAIN` untuk override domain awal.
+> Proxy residensial murah (~$5–15/bulan) sudah cukup.
+
 ## Fitur
 
 - 🔍 Search manga
